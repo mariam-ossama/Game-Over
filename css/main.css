@@ -1,0 +1,180 @@
+:root{
+    --nerko-font-family: 'Nerko One',cursive, sans-serif;
+    --comfortaa-font-family: 'Comfortaa',cursive,sans-serif;
+    --comic-font-family: "Comic Sans MS","Nerko One",cursive;
+    --white-color: #fff;
+}
+*{
+    font-family: var(--comic-font-family);
+}
+body{
+    background-color: #272B30;
+    background-image: url(../images/wraper.png);
+    background-repeat: no-repeat;
+    background-size: 100% 14rem;
+    background-position: top;
+}
+
+/*NAVBAR*/
+nav{
+    background-color: #3A497B;
+    border: .0625rem solid transparent;
+    border-radius: 25px;
+}
+nav .navbar-brand span{
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    margin: 0 1rem 0 0;
+    padding: .3125rem 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--white-color) !important;
+}
+nav img {
+    width: 15% !important;
+}
+#navbarNavAltMarkup a{
+    font-family: var(--comfortaa-font-family);
+    font-size: .7656rem;
+    line-height: 1.1484rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--white-color) !important;
+    transition: color .5s;
+}
+#navbarNavAltMarkup a:hover,#navbarNavAltMarkup a:focus{
+    color: #0099cc !important;
+}
+.nav-bar-container{
+    height: 28vh;
+}
+/*Make navbar be 75% in large screens*/
+@media (min-width: 992px) {
+    nav {
+        max-width: 75%;
+    }
+}
+
+/*HOME*/
+.game-item{
+    transform: scale(1);
+    transition: transform 1s;
+}
+.game-item:hover{
+    transform: scale(1.1);
+}
+.game-item .card{
+    background-color: #272B30 !important;
+     height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.game-item .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.game-item .card-body {
+    flex: 1 1 auto;
+}
+
+.game-item .card-text {
+    min-height: 60px;
+}
+
+.game-item .card-body .card-title{
+    font-family: var(--comic-font-family);
+    font-size: .875rem;
+    line-height: 1.05rem;
+    margin: 0px 0px .5rem;
+    font-weight: 500;
+    color: var(--white-color);
+}
+.game-item .card-body .card-text{
+    font-family: var(--comic-font-family);
+    font-size: .875rem;
+    line-height: 1.3125rem;
+    font-weight: 400;
+    text-align: center;
+    color: #848689 !important;
+}
+.game-item .card-body span{
+    font-family: var(--comic-font-family);
+    font-size: .75rem;
+    line-height: .75rem;
+    padding: .5rem;
+    font-weight: 700;
+    color: var(--white-color) !important;
+    text-align: center;
+    background-color: #3A497B !important;
+}
+.game-item .card-footer span{
+    font-family: var(--comic-font-family);
+    font-size: .6563rem;
+    line-height: .6563rem;
+    padding: .2297rem .4266rem;
+    font-weight: 700;
+    color: var(--white-color) !important;
+    text-align: center;
+    background-color: #32383E !important;
+}
+
+#details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.95);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.overlay-content {
+  width: 80%;
+  max-width: 900px;
+  background: #272B30;
+  color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 3rem;
+  cursor: pointer;
+  color: var(--white-color);
+}
+.close-btn:hover {
+  color: #ff4081;
+}
+.game-img-container{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ /*spinner*/
+ .loading-spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+    display: none;
+    color: #ff4081;
+}
